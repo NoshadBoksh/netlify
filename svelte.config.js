@@ -1,15 +1,12 @@
 import adapter from '@sveltejs/adapter-netlify';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		// Remove the preprocess option from here
-		adapter: adapter(),
+		// Specify the target element where the Svelte app will be mounted
 		target: '#svelte',
+		adapter: adapter(),
 	},
-	// Add preprocessors here using vitePreprocess
-	preprocess: vitePreprocess()
 };
 
 export default config;
