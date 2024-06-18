@@ -1,14 +1,16 @@
 import adapter from '@sveltejs/adapter-netlify';
+import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    // The target option has been removed in newer versions of SvelteKit.
-    // You can safely remove this line.
-    // target: '#svelte',
-
     adapter: adapter(),
   },
+  preprocess: preprocess({
+    scss: {
+      includePaths: ['src'],
+    },
+  }),
 };
 
 export default config;
