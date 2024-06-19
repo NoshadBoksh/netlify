@@ -29,6 +29,7 @@
 	"dependencies": {
 		"bulma": "^1.0.1",
 		"sass": "^1.77.6",
+		"strapi-plugin-netlify-deployments": "^2.0.2",
 		"svelte-preprocess": "^6.0.1"
 	}
 }
